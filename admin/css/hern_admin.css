@@ -1,0 +1,470 @@
+/* ==========================
+   ADMIN NAVBAR
+   ========================== */
+
+.admin-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #005f5b;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.admin-navbar .container {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.admin-logo:hover {
+  color: #fff;
+}
+
+.admin-nav-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.admin-nav-links a {
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 999px;
+  transition: .2s;
+  font-size: 1.1rem; /* ← agrandar aquí */
+}
+
+.admin-nav-links a:hover {
+  background: rgba(255,255,255,.15);
+  color: #fff;
+}
+
+/* ==========================
+   ADMIN FOOTER
+   ========================== */
+
+.admin-footer {
+  margin-top: 80px;
+  padding: 24px 0;
+  background: #005f5b !important;
+}
+
+.admin-footer p {
+  margin: 0;
+  text-align: center;
+  color: rgba(255,255,255,.7);
+  font-size: .9rem;
+}
+.admin-form-header p {
+  color: #4b5563;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0;
+}
+.admin-form-header h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+.form-group-custom input[type="file"] {
+  width: 100%;
+  padding: 18px;
+  border: 2px dashed #b9c9c6;
+  border-radius: 18px;
+  background: #f8fbfa;
+  color: var(--hern-text);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-group-custom input[type="file"]::file-selector-button {
+  margin-right: 16px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  background: var(--hern-primary);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.form-group-custom input[type="file"]::file-selector-button:hover {
+  background: var(--hern-primary-dark);
+}
+
+.form-group-custom input[type="file"]:hover {
+  background: #eef6f4;
+  border-color: var(--hern-primary);
+}
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+.admin-logo-mark {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.admin-properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 28px;
+}
+
+.admin-property-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.admin-property-img {
+  height: 260px;
+}
+
+.admin-property-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.admin-property-content {
+  padding: 24px;
+}
+
+.admin-property-top {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.admin-property-type {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #eef3f1;
+  color: var(--hern-primary);
+  font-size: .8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-property-content h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.admin-property-location {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+
+.admin-property-price {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--hern-primary);
+  margin: 16px 0;
+}
+
+
+.admin-property-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.admin-status.disponible {
+  background: rgba(25, 135, 84, 0.14);
+  color: #198754;
+}
+
+.admin-status.reservada {
+  background: rgba(255, 193, 7, 0.18);
+  color: #8a6500;
+}
+
+.admin-status.vendida {
+  background: rgba(220, 53, 69, 0.12);
+  color: #dc3545;
+}
+
+@media (max-width: 992px) {
+  .admin-properties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-property-card {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-property-img img {
+    height: 240px;
+  }
+}
+.admin-edit-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+.admin-success-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 28px;
+  padding: 24px;
+  border-radius: 22px;
+  background: #e8f6ef;
+  border: 1px solid #b9e4cc;
+}
+
+.admin-success-box strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #0f5132;
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.admin-success-box p {
+  margin: 0;
+  color: #276749;
+  font-size: 1rem;
+}
+
+.admin-success-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.admin-success-btn {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.admin-success-btn.primary {
+  background: #005f5b;
+  color: #fff;
+}
+
+.admin-success-btn.secondary {
+  background: #fff;
+  color: #005f5b;
+}
+
+.admin-success-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .admin-success-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-success-actions,
+  .admin-success-btn {
+    width: 100%;
+  }
+
+  .admin-success-btn {
+    text-align: center;
+  }
+}
+.admin-contact-list {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.admin-contact-card {
+  position: relative;
+  border-left: 8px solid #c9a66b;
+}
+
+.admin-contact-card.contactado {
+  border-left-color: #198754;
+}
+
+.admin-property-box.general-query {
+  background: #fff7e6;
+  border: 1px solid #f1d28a;
+}
+
+.admin-contact-data {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.admin-contact-data p {
+  margin: 0;
+  color: #334155;
+  font-size: 1rem;
+}
+
+.admin-contact-data a {
+  color: #102331;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.admin-message {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.admin-message p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+@media (max-width: 992px) {
+  .admin-contact-list {
+    grid-template-columns: 1fr;
+  }
+}
+.form-group-custom select:disabled {
+  background: #eef3f1;
+  color: #8a9a96;
+  cursor: not-allowed;
+}
+
+.form-group-custom select {
+  cursor: pointer;
+}
+
+.admin-form-card select option {
+  font-size: 1rem;
+}
+
+.admin-submit-group {
+  margin-top: 10px;
+}
+.admin-login-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      rgba(0, 40, 45, 0.62),
+      rgba(0, 40, 45, 0.72)
+    ),
+    url("../../assets/img/propiedades/fachada_1.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 540px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  padding: 46px;
+  border-radius: 30px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+}
+
+.admin-login-card h1 {
+  color: var(--hern-text);
+  font-size: 2.6rem;
+  font-weight: 900;
+  margin: 18px 0 14px;
+}
+
+.admin-login-card p {
+  color: var(--hern-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.admin-navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .admin-navbar-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .admin-menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .admin-nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 18px;
+  }
+
+  .admin-nav-links.active {
+    display: flex;
+  }
+
+  .admin-nav-links a {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+}
